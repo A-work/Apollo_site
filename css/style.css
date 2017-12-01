@@ -125,3 +125,62 @@ h2 span {
     text-align: center;
     margin-top: 47px;
 }
+
+.social-btn {
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    margin-right: 15px;
+    vertical-align: middle;
+    background-image: url("../img/sprite.png");
+    background-repeat: no-repeat;
+    font-size: 0;
+}
+
+.social-btn:hover {
+    opacity: 0.4;
+}
+
+.social-btn:active {
+    opacity: 1;
+}
+
+.social-btn-fb {
+    background-position: 0px 0px;
+}
+
+.social-btn-in {
+    background-position: -33px 0px;
+}
+
+.social-btn-tw {
+    background-position: -33px -33px;
+}
+
+.social-btn-p {
+    background-position: 0px -33px;
+}
+
+.social-button {
+    margin-left: 690px;
+    margin-top: 70px;
+}
+
+.btn {
+    display: inline-block;
+    vertical-align: middle;
+    width: 75px;
+    height: 75px;
+    background-image: url("../img/sprite1.png");
+    background-repeat: no-repeat;
+    font-size: 0;
+}
+
+.btn-left {
+    background-position: 0px 0px;
+}
+
+.btn-right {
+    background-position: -75px 0px;
+}
+
