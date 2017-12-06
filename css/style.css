@@ -17,7 +17,7 @@ body {
     width: 1500px;
     height: 750px;
     margin-top: 50px;
-    border: 1px solid black;
+    border: 1px solid #efefef;
     background-color: #efefef;
 }
 
@@ -184,3 +184,57 @@ h2 span {
     background-position: -75px 0px;
 }
 
+form {
+    max-width: 560px;
+    margin-top: 100px;
+    margin-left: 457px;
+    padding: 0;
+}
+
+form input, form textarea {
+    display: block;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: black;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: #efefef;
+}
+
+
+form textarea {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    height: 115px;
+}
+
+
+.feedback-form-left {
+    float: left;
+    width: 250px;
+}
+
+.feedback-form-right {
+    float: right;
+    width: 250px;
+    
+}
+
+.feedback-form-left-message {
+    float: left;
+    width: 560px;
+}
+
+.btn-message {
+    width: 585px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
