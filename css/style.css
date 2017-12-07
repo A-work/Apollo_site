@@ -84,61 +84,42 @@ h2 span {
     margin-top: 40px;
 }
 
-/* Слайдер */
-#slider {
-    position: relative; 
-    overflow: hidden; 
-    width: 1483px; 
-    height: 750px; 
-    margin: 0 auto; 
-    padding: 0; 
-    list-style: none;
-}
 
+/* Стилизация слайдера 1 */
 
-.slide {
-    position: absolute; 
-    width: 100%; 
-    height: 100%; 
-    transition: all 1s ease-in 0.1s; 
-    left:0;
-}
-
-.slide img {
+#swiper1 {
     width: 100%;
+    height: 100%;
+}
+#swiper1 .swiper-slide {
+    text-align: center;
+    
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
 }
 
-.arrows {
-    position: relative; 
-    margin: 0 auto; 
-    width: 1400px;  
-}
+/* Стилизация слайдера 2 */
 
-.arrow {
-    position: absolute; 
-    cursor: pointer;
-    background-image: url(/img/sprite1.png);
-    background-repeat: no-repeat;
-    width: 75px;
-    height: 75px;
-    font-size: 0;
-}
+#swiper2 {
+    width: 100%;
+    margin-top: 9%;
+    }
 
-.no_active {
-    color: red;
-}
-
-.next {
-    right: 0;
-    background-position: -75px 0px;
-    top: -417px;
-    z-index: 100;
-} 
-
-.prew {
-    background-position: 0px 0px;
-    top: -417px;
-    z-index: 100;
+#swiper2 .swiper-slide {
+    background-position: center;
+    background-size: contain;
+    width: 674px;
+    height: 449px;
 }
 
 /* Стилизация блоков */
@@ -279,3 +260,4 @@ form textarea {
     display: table;
     clear: both;
 }
+

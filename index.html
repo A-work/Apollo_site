@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>Apollo</title>
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link rel="stylesheet" href="css/swiper.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     
@@ -45,19 +46,14 @@
             </div>
             
             <div class="container_style content3">
-                <div>
-                    <ul id="slider">
-                        <li class="slide active">
-                            <img src="/img/photo-3.jpg">
-                        </li>
-                        <li class="slide">
-                            <img src="/img/photo-3.1.jpg">
-                        </li>
-                    </ul>
-                </div>
-                <div class="arrows">
-                    <span class="arrow next" id="next">Next</span>
-                    <span class="arrow prew" id="prew">Prev</span>
+               <div class="swiper-container" id="swiper1">
+                   <div class="swiper-wrapper">
+                       <div class="swiper-slide"><img src="img/slider-1.jpg"></div>
+                       <div class="swiper-slide"><img src="img/slider-2.jpg"></div>
+                   </div>
+                   
+                   <div class="swiper-button-next">Next</div>
+                   <div class="swiper-button-prev">Prev</div>
                 </div>
             </div>
             
@@ -70,10 +66,20 @@
                 nesciunt.</p>
             </div>
             
+            
             <div class="container_style content5">
-                <a class="btn btn-left" href="#">left</a>
-                <a class="btn btn-right" href="#">right</a>
+                <div class="swiper-container" id="swiper2" >
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(/img/carousel-foto-2.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/carousel-foto-1.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/carousel-foto-3.jpg)"></div>
+                    </div>
+
+                    <div class="swiper-button-next">Next</div>
+                    <div class="swiper-button-prev">Prev</div>
+                </div>
             </div>
+            
             
             <div class="container_style content6">
                 <h2><span>Say</span> Hello</h2>
@@ -96,43 +102,34 @@
                 </form>
             </div>
         </main>
-        
+    
+        <script src="js/swiper.min.js"></script>
         <script>
-            var next = document.getElementById('next');
-            var prew = document.getElementById('prew');
-
-            var slides = document.getElementsByClassName('slide');
-            for(var i=0; i<slides.length; i++) {
-            slides[i].style.zIndex = slides.length - i;
-            }
-
-            next.onclick = function () {
-            var activeEl = document.querySelector('.active');
-            if(activeEl.nextElementSibling) {
-            activeEl.style.left = "-100%";
-            activeEl.classList.remove('active');
-            activeEl.nextElementSibling.classList.add('active');
-            this.classList.remove('no_active');
-            prew.classList.remove('no_active');
-            if(!activeEl.nextElementSibling.nextElementSibling) {
-            this.classList.add('no_active');
-                }
-            }
-        }
+            var swiper1 = new Swiper('#swiper1', {
+                navigation: {
+                nextEl: '#swiper1 .swiper-button-next',
+                prevEl: '#swiper1 .swiper-button-prev',
+                },
+            });
             
-            prew.onclick = function () {
-            var activeEl = document.querySelector('.active');
-            if(activeEl.previousElementSibling) {
-            activeEl.previousElementSibling.style.left = "0%";
-            activeEl.classList.remove('active');
-            activeEl.previousElementSibling.classList.add('active');
-            this.classList.remove('no_active');
-            next.classList.remove('no_active');
-            if(!activeEl.previousElementSibling.previousElementSibling) {
-            this.classList.add('no_active');
-                }
-            }
-        } 
+            var swiper2 = new Swiper('#swiper2', {
+                initialSlide: 1,
+                effect: 'coverflow',
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: 'auto',
+                coverflowEffect: {
+                    rotate: 1,
+                    stretch: 60,
+                    depth: 200,
+                    modifier: 2,
+                    slideShadows : true,
+                },
+                navigation: {
+                nextEl: '#swiper2 .swiper-button-next',
+                prevEl: '#swiper2 .swiper-button-prev',
+                },
+            });
         </script>
     </body>
 </html>
