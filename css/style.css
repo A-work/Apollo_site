@@ -122,6 +122,8 @@ h2 span {
     height: 449px;
 }
 
+
+
 /* Стилизация блоков */
 
 .content3 {
@@ -261,3 +263,7 @@ form textarea {
     clear: both;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+    z-index: 12;
+}

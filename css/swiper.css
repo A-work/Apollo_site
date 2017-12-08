@@ -16,7 +16,7 @@
   list-style: none;
   padding: 0;
   /* Fix of Webkit flickering */
-  z-index: 1;
+/*  z-index: 1;*/
 }
 .swiper-container-no-flexbox .swiper-slide {
   float: left;
@@ -32,7 +32,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  z-index: 1;
+/*  z-index: 1;*/
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -118,7 +118,7 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 10;
+  z-index: 3;
 }
 .swiper-container-3d .swiper-slide-shadow-left {
   background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
@@ -202,6 +202,8 @@
 .swiper-container-rtl .swiper-button-prev.swiper-button-black {
   background-position: -75px 0px;  
 }
+
+
 .swiper-pagination {
   position: absolute;
   text-align: center;
@@ -210,7 +212,7 @@
   transition: 300ms opacity;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  z-index: 10;
+  z-index: 9;
 }
 .swiper-pagination.swiper-pagination-hidden {
   opacity: 0;
@@ -498,7 +500,7 @@ button.swiper-pagination-bullet {
   top: 0;
   pointer-events: none;
   opacity: 0;
-  z-index: -1000;
+/*  z-index: -1000;*/
 }
 .swiper-container-fade.swiper-container-free-mode .swiper-slide {
   -webkit-transition-timing-function: ease-out;
@@ -525,7 +527,7 @@ button.swiper-pagination-bullet {
   pointer-events: none;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  z-index: 1;
+/*  z-index: 1;*/
   visibility: hidden;
   -webkit-transform-origin: 0 0;
   -ms-transform-origin: 0 0;
